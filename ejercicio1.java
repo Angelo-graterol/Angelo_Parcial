@@ -44,8 +44,8 @@ public class ejercicio1 {
             sumador ++;
         }
         boolean primo= false;
+        double contador=0;
         for (int i = 0; i < intervalo.length; i++) {
-            double contador=0;
             double operacionModulo=0;
             for (int j = 0; j < intervalo[j]; j++) {
                 
