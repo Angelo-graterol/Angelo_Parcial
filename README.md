@@ -13,7 +13,7 @@
     si es un numero primo lo imprimo para que el usuario los vea
 
 
-
+intente validar que el numero sea primo para poder imprimirlo, utilizando arrays y for y variables booleanas
 
 
 
