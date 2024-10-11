@@ -21,50 +21,67 @@ public class ejercicio1 {
         } while (validacion==false);
         int longitudEntreNumeros=0;
         if (numerosEnteros[0]>numerosEnteros[1]) {
-            longitudEntreNumeros= numerosEnteros[0]-numerosEnteros[1];
+            longitudEntreNumeros= numerosEnteros[0]-numerosEnteros[1]-1;
             
         }else if (numerosEnteros[0]<numerosEnteros[1]) {
-            longitudEntreNumeros= numerosEnteros[1]-numerosEnteros[0];
+            longitudEntreNumeros= numerosEnteros[1]-numerosEnteros[0]-1;
             
         }
         
         int[] intervalo= new int[longitudEntreNumeros];
         if(numerosEnteros[0]>numerosEnteros[1]){
-            intervalo[0]=numerosEnteros[1];
+            intervalo[0]=numerosEnteros[1]+1;
             
         }else{
-            intervalo[0]=numerosEnteros[0];
+            intervalo[0]=numerosEnteros[0]+1;
 
         }
         //numero que ayuda a llenar el intervalo
         int sumador= intervalo[0];
-        for (int i = 1; i < intervalo.length; i++) {
+        for (int i = 0; i < intervalo.length; i++) {
             
             intervalo[i]=sumador;
             sumador ++;
         }
-        boolean primo= false;
-        double contador=0;
-        for (int i = 0; i < intervalo.length; i++) {
-            double operacionModulo=0;
-            for (int j = 0; j < intervalo[j]; j++) {
-                
-                
-                operacionModulo=intervalo[i]% intervalo[j];
-                contador=contador+operacionModulo;
-                
-                if (contador==0) {
-                    primo= true;
-                    
-                    
+        boolean primo;
+        int n = intervalo.length;
+        for (int i=intervalo[0]; i<=intervalo[n-1]; i++) {
+            primo=true;    
+            for (int j = 2; j < intervalo[n-1]; j++) {
+                if (intervalo[i]%j==0) {
+                    primo=false;
                 }
-                
             }
             if (primo==true) {
-                
                 System.out.println(intervalo[i]);
+                
             }
         }
+
+
+
+        // boolean primo= false;
+        // double contador=0;
+        // for (int i = 0; i < intervalo.length; i++) {
+        //     double operacionModulo=0;
+        //     for (int j = 0; j < intervalo[j]; j++) {
+                
+                
+        //         operacionModulo=intervalo[i]% intervalo[j];
+        //         contador=contador+operacionModulo;
+                
+        //         if (contador==0) {
+        //             primo= true;
+                    
+                    
+        //         }
+                
+        //     }
+        //     if (primo==true) {
+                
+        //         System.out.println(intervalo[i]);
+        //     }
+        // }
 
 
 
